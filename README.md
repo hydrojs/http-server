@@ -17,7 +17,7 @@ Config:
 hydro.set({
   plugins: ['hydro-http-server'],
   httpServer: {
-    app: function(req, res){} // request handler, could be express, connect etc.
+    app: function(req, res){}, // request handler, could be express, connect etc.
     port: 3003, // server port, default: 3003, optional
     timeout: 100 // server timeout, default: 100, optional
   }

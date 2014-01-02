@@ -4,6 +4,19 @@
 
 var http = require('http');
 
+/**
+ * Start/stop HTTP server around each test.
+ *
+ * Options:
+ *
+ * - port: Server port (default: 3003)
+ * - timeout: Server timeout (default: 100)
+ * - app: Request handler, could be `express()` etc.
+ *
+ * @param {Hydro} hydro
+ * @api public
+ */
+
 module.exports = function(hydro) {
   var opts = hydro.get('httpServer') || {};
   var server = null;
